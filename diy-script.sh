@@ -44,7 +44,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-git clone https://github.com/kenzok78/luci-theme-design package/luci-theme-design
+
 # 科学上网插件
 git clone --depth=1 https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
@@ -57,15 +57,16 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git l
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
+git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
 
 # 更改 Argon 主题背景
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 晶晨宝盒
-git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
-sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
+#git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
+#sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
 # sed -i "s|kernel_path.*|kernel_path 'https://github.com/ophub/kernel'|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
+#sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
@@ -101,7 +102,7 @@ chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35xx/Makefile
 
 # x86 型号只显示 CPU 型号
-sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+#sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 
 # 修改本地时间格式
 sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
