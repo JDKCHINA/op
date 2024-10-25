@@ -44,7 +44,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-
+git clone https://github.com/kenzok78/luci-theme-design package/luci-theme-design
 # 科学上网插件
 git clone --depth=1 https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
