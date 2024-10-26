@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# 修改主机名以及一些显示信息
+#sed -i "s/hostname='*.*'/hostname='test'/" package/base-files/files/bin/config_generate
+#sed -i "s/DISTRIB_ID='*.*'/DISTRIB_ID='OpenWrt'/g" package/base-files/files/etc/openwrt_release
+#sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='OpenWrt'/g"  package/base-files/files/etc/openwrt_release
+#sed -i '/(<%=pcdata(ver.luciversion)%>)/a\      built by test' package/lean/autocore/files/x86/index.htm
+#echo -n "$(date +'%Y%m%d')" > package/base-files/files/etc/openwrt_version
+#curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/banner_test > package/base-files/files/etc/banner
+
+# 开启wifi选项
+sed -i 's/disabled=*.*/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/ssid=*.*/ssid=Cyber_3588/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 # 修改默认IP
 #sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
