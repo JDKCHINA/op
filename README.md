@@ -31,13 +31,7 @@
 | 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
 | :-------------: | :-------------: | :-------------: | :-------------: |
 | [![](https://img.shields.io/badge/OpenWrt-Rockchip_平台-32C955.svg?logo=op)](https://github.com/498110811/op/blob/main/.github/workflows/Rockchip-OpenWrt.yml) | [![](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml/badge.svg)](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/498110811/op/blob/main/configs/rockchip.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/498110811/Op/releases/tag/Rockchip) |
-[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?style=flat&logo=hack-the-box)](https://github.com/yasuis/op/releases) 即可跳转到该设备固件下载页面
-| 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
-| :-------------: | :-------------: | :-------------: | :-------------: |
-| [![](https://img.shields.io/badge/OpenWrt-Rockchip_平台-32C955.svg?logo=op)](https://github.com/498110811/op/blob/main/.github/workflows/Rockchip-OpenWrt.yml) | [![](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml/badge.svg)](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/498110811/op/blob/main/configs/rockchip.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/498110811/Op/releases/tag/Rockchip) |[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?style=flat&logo=hack-the-box)](https://github.com/yasuis/op/releases) 即可跳转到该设备固件下载页面
-| 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
-| :-------------: | :-------------: | :-------------: | :-------------: |
-| [![](https://img.shields.io/badge/OpenWrt-Rockchip_平台-32C955.svg?logo=op)](https://github.com/498110811/op/blob/main/.github/workflows/Rockchip-OpenWrt.yml) | [![](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml/badge.svg)](https://github.com/498110811/op/actions/workflows/Rockchip-OpenWrt.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/498110811/op/blob/main/configs/rockchip.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/498110811/Op/releases/tag/Rockchip) |
+[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?style=flat&logo=hack-the-box)](https://github.com/yasuis/op/releases) 
 
 ## 特别提示 [![](https://img.shields.io/badge/-个人免责声明-FFFFFF.svg)](#特别提示-)
 
