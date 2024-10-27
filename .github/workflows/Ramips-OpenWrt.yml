@@ -102,9 +102,9 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         rm -rf package/wwan/driver/quectel_MHI
-        git clone --depth=1 https://github.com/498110811/quectel_MHI
-        tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
-        ls package/wwan/driver/quectel_MHI
+        #git clone --depth=1 https://github.com/498110811/quectel_MHI
+        #tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
+        ls package/wwan/driver
         sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
         git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
         ./scripts/feeds update -a
