@@ -103,13 +103,16 @@ jobs:
         cd $OPENWRT_PATH
         #替换quectel_MHI
         #rm -rf package/wwan/driver/quectel_MHI
-        #git clone --depth=1 https://github.com/498110811/quectel_MHI
+        git clone --depth=1 https://github.com/498110811/quectel_MHI
         #tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
         
         sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
+        
         git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
         ./scripts/feeds update -a
+        cp -f quectel_MHI/qmi_wwan_f.c feeds/5G/fibocom_QMI_WWAN/src/qmi_wwan_f.c
         ./scripts/feeds install -a
+        
 
     - name: 加载自定义配置
       run: |
