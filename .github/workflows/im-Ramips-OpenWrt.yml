@@ -110,7 +110,7 @@ jobs:
         
         git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
         ./scripts/feeds update -a
-        cp -f quectel_MHI/qmi_wwan_f.c feeds/5G/fibocom_QMI_WWAN/src/qmi_wwan_f.c
+        cp -f quectel_MHI/qmi_wwan_f.c feeds/5g/fibocom_QMI_WWAN/src/qmi_wwan_f.c
         ./scripts/feeds install -a
         
 
