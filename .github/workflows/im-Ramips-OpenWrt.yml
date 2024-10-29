@@ -106,9 +106,9 @@ jobs:
         git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
         ./scripts/feeds update -a
         #替换quectel_MHI
-        rm -rf feeds/quectel_MHI
+        rm -rf feeds/5g/quectel_MHI
         git clone --depth=1 https://github.com/498110811/quectel_MHI
-        tar -xvf quectel_MHI/quectel_MHI.tar.gz -C feeds/quectel_MHI
+        tar -xvf quectel_MHI/quectel_MHI.tar.gz -C feeds/5g
         ./scripts/feeds install -a
         
 
