@@ -8,6 +8,12 @@
 #echo -n "$(date +'%Y%m%d')" > package/base-files/files/etc/openwrt_version
 #curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/banner_test > package/base-files/files/etc/banner
 
+# 修改默认皮肤
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-ssl-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-light/Makefile
+
 # 开启wifi选项
 sed -i 's/disabled=*.*/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i 's/ssid=*.*/ssid=Cyber_3588/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
@@ -72,7 +78,7 @@ git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial l
 git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
 
 # 更改 Argon 主题背景
-cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+#cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 晶晨宝盒
 #git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
