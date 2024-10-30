@@ -101,10 +101,18 @@ jobs:
     - name: 安装 Feeds
       run: |
         cd $OPENWRT_PATH
-        #替换quectel_MHI
+        #替换quectel_MHI和新增c8-571
         rm -rf package/wwan/driver/quectel_MHI
         git clone --depth=1 https://github.com/498110811/quectel_MHI
         tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
+        cp -f quectel_MHI/mt7621.mk target/linux/ramips/image/mt7621.mk
+        cp quectel_MHI/mt7621_c8_571.dts target/linux/ramips/dts
+        
+        # 修改默认皮肤
+        sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
+        sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-nginx/Makefile
+        sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-ssl-nginx/Makefile
+        sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-light/Makefile
         
         sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
         git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
