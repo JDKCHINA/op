@@ -101,7 +101,8 @@ jobs:
     - name: 安装 Feeds
       run: |
         cd $OPENWRT_PATH
-        sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
+        #sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
+        sed -i "/src-git modem /d; 1 i src-git modem https://github.com/FUjr/modem_feeds.git" feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
