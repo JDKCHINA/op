@@ -89,6 +89,7 @@ jobs:
         echo "DEVICE_TARGET=$DEVICE_TARGET" >> $GITHUB_ENV
         DEVICE_SUBTARGET=$(cat .config | grep CONFIG_TARGET_SUBTARGET | awk -F '"' '{print $2}')
         echo "DEVICE_SUBTARGET=$DEVICE_SUBTARGET" >> $GITHUB_ENV
+        echo "date1=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
     - name: 缓存工具链
       if: env.CACHE_TOOLCHAIN == 'true'
@@ -158,7 +159,7 @@ jobs:
     - name: 重命名文件
       if: steps.compile.outputs.status == 'success' && !cancelled()
       run: |
-        find openwrt/bin/targets -type f \( -name "openwrt*.bin" \) -exec sh -c 'mv "$1" "$(dirname "$1")/${{ env.date1 }}-${{ matrix.target.kernel }}-$(basename "$1")"' sh {} \; 2>/dev/null || true
+        find openwrt/bin/targets -type f \( -name "openwrt*.bin" \) -exec sh -c 'mv "$1" "$(dirname "$1")/${{ env.date1 }}-kernel${{ env.KERNEL }}-$(basename "$1")"' sh {} \; 2>/dev/null || true
         
     - name: 上传Bin目录
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
