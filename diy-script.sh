@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#修改应用名称
+replace_text() {
+  search_text="$1" new_text="$2"
+  sed -i "s/$search_text/$new_text/g" $(grep "$search_text" -rl ./ 2>/dev/null) || echo -e "\e[31mNot found [$search_text]\e[0m"
+}
+
+#replace_text "Turbo ACC 网络加速" "网络加速"
+
 # 修改主机名以及一些显示信息
 #sed -i "s/hostname='*.*'/hostname='test'/" package/base-files/files/bin/config_generate
 #sed -i "s/DISTRIB_ID='*.*'/DISTRIB_ID='OpenWrt'/g" package/base-files/files/etc/openwrt_release
