@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#移除neo3补丁
+find . -name 205-rockchip-rk3328-add-support-for-FriendlyARM-NanoPi-Neo3.patch | xargs rm
+sed -i '/^define Device/friendlyarm_nanopi-neo3$/,/^endef$/d;/^TARGET_DEVICES += friendlyarm_nanopi-neo3$/d' target/linux/rockchip/image/armv8.mk
+
 #修改应用名称
 replace_text() {
   search_text="$1" new_text="$2"
