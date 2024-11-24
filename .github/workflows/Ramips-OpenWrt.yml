@@ -108,8 +108,8 @@ jobs:
         cp -f quectel_MHI/mt7621.mk target/linux/ramips/image/mt7621.mk
         cp quectel_MHI/mt7621_c8_571.dts target/linux/ramips/dts
         
-        sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
-        git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
+        #sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
+        #git clone --depth=1 https://github.com/kenzok78/luci-theme-design package/luci-theme-design
         ./scripts/feeds update -a
         # 修改默认皮肤
         sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
