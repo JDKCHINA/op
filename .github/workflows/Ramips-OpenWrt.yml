@@ -6,7 +6,7 @@ on:
     - cron: 0 18 * * *
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: configs/ramips.config
   #EXTRA_CONFIG: configs/extra.config
@@ -104,7 +104,7 @@ jobs:
         #替换quectel_MHI和新增c8-571
         rm -rf package/wwan/driver/quectel_MHI
         git clone --depth=1 https://github.com/498110811/quectel_MHI
-        #tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
+        tar -xvf quectel_MHI/quectel_MHI.tar.gz -C package/wwan/driver
         cp -f quectel_MHI/mt7621.mk target/linux/ramips/image/mt7621.mk
         cp quectel_MHI/mt7621_c8_571.dts target/linux/ramips/dts
         
