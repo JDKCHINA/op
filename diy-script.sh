@@ -24,8 +24,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-light/Makefile
 
 # 开启wifi选项
-#sed -i 's/disabled=*.*/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-#sed -i 's/ssid=*.*/ssid=Cyber_3588/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/disabled=*.*/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/ssid=*.*/ssid=Cyber_3588/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 设置wifi加密方式为psk2+ccmp,wifi密码为88888889
 #sed -i 's/encryption=none/encryption=psk2+ccmp/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
