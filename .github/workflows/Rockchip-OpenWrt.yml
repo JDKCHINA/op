@@ -100,11 +100,10 @@ jobs:
     - name: 安装 Feeds
       run: |
         cd $OPENWRT_PATH
-        #sed -i "/src-git 5g /d; 1 i src-git 5g https://github.com/Siriling/5G-Modem-Support.git" feeds.conf.default
-        #sed -i "/src-git modem /d; 1 i src-git modem https://github.com/FUjr/modem_feeds.git" feeds.conf.default
-        #git clone --depth=1 https://github.com/SAENE/luci-theme-design package/luci-theme-design
-        git clone --depth=1 https://github.com/498110811/quectel_MHI
-        cp -f quectel_MHI/feeds.conf.default .
+        #修改luci源
+        sed -i 's/coolsnowwolf\/luci.git;openwrt-23.05/498110811\/luci.git/g' feeds.conf.default
+        #新增modem拨号插件
+        sed -i "/src-git modem /d; 1 i src-git modem https://github.com/FUjr/modem_feeds.git" feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
