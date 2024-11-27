@@ -1,16 +1,13 @@
 #!/bin/bash
 
-#移除neo3补丁
-#find . -name 205-rockchip-rk3328-add-support-for-FriendlyARM-NanoPi-Neo3.patch | xargs rm
-#sed -i '/^define Device/friendlyarm_nanopi-neo3$/,/^endef$/d;/^TARGET_DEVICES += friendlyarm_nanopi-neo3$/d' target/linux/rockchip/image/armv8.mk
-
 #修改应用名称
 replace_text() {
   search_text="$1" new_text="$2"
   sed -i "s/$search_text/$new_text/g" $(grep "$search_text" -rl ./ 2>/dev/null) || echo -e "\e[31mNot found [$search_text]\e[0m"
 }
 
-#replace_text "Turbo ACC 网络加速" "网络加速"
+replace_text "Turbo ACC 网络加速" "网络加速"
+replace_text "移动网络" "蜂窝"
 
 # 修改主机名以及一些显示信息
 #sed -i "s/hostname='*.*'/hostname='test'/" package/base-files/files/bin/config_generate
