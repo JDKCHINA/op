@@ -10,3 +10,9 @@ function git_sparse_clone() {
 
 # 添加额外插件
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash package/luci-app-openclash
+
+# 修改默认皮肤
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-ssl-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-light/Makefile
