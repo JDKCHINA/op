@@ -120,7 +120,7 @@ jobs:
 
     - name: 加载自定义配置
       run: |
-        git checkout 468d14896b501b62c7ece93368dbd82e33e6937f
+        #git checkout 468d14896b501b62c7ece93368dbd82e33e6937f
         [ -e files ] && mv files $OPENWRT_PATH/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
         #cat $EXTRA_CONFIG >> $OPENWRT_PATH/.config
