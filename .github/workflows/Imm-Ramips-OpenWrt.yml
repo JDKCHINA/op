@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
-  CONFIG_FILE: configs/ramips.config
+  CONFIG_FILE: configs/im_ramips.config
   #EXTRA_CONFIG: configs/extra.config
   DIY_SCRIPT: im_ramips.sh
   CLASH_KERNEL: Ramips
