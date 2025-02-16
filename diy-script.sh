@@ -7,7 +7,7 @@ replace_text() {
 }
 
 replace_text "Turbo ACC 网络加速" "网络加速"
-replace_text "移动网络" "蜂窝"
+replace_text "移动网络" "移动蜂窝"
 
 # 修改主机名以及一些显示信息
 #sed -i "s/hostname='*.*'/hostname='test'/" package/base-files/files/bin/config_generate
