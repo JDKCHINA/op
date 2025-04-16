@@ -105,6 +105,9 @@ jobs:
         sed -i 's/coolsnowwolf\/luci.git;openwrt-23.05/coolsnowwolf\/luci.git/g' feeds.conf.default
         #新增modem拨号插件
         sed -i "/src-git modem /d; 1 i src-git modem https://github.com/FUjr/modem_feeds.git" feeds.conf.default
+
+        #新增风扇通用控制插件
+        sed -i "/src-git fancontrol /d; 1 i src-git fancontrol https://github.com/JiaY-shi/fancontrol.git" feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
