@@ -73,6 +73,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
+git_sparse_clone main https://github.com/djylb/nps-openwrt luci-app-npc package/luci-app-npc
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash package/luci-app-openclash
 git_sparse_clone main https://github.com/xiaorouji/openwrt-passwall luci-app-passwall package/luci-app-passwall
 git_sparse_clone main https://github.com/xiaorouji/openwrt-passwall2 luci-app-passwall2 package/luci-app-passwall2
