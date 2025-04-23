@@ -110,7 +110,7 @@ jobs:
         sed -i "/src-git fancontrol /d; 1 i src-git fancontrol https://github.com/JiaY-shi/fancontrol.git" feeds.conf.default
 
         #新增nps内网穿透插件
-        sed -i "/src-git npc /d; 1 i src-git npc https://github.com/djylb/nps-openwrt.git" feeds.conf.default    
+       # sed -i "/src-git npc /d; 1 i src-git npc https://github.com/djylb/nps-openwrt.git" feeds.conf.default    
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
